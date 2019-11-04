@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    font-family: 'Red Hat Display', sans-serif;
+    color: red;
+    font-size: 20px;
+}
+
+body {
+    background: linear-gradient(white, red);
+    background-attachment: fixed;
+}
+
+.header {
+    display: grid;
+    grid-template-areas: "logo search login"
+                         "name cont-list cont-list";
+    grid-template-columns: 10% 45% 45%;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+}
+
+#logo {
+    grid-area: logo;
+    text-align: center;
+    /* background: green; */
+}
+
+#logo img {
+    width: 100px;
+}
+
+#name {
+    grid-area: name;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    /* background: orange; */
+}
+
+#search {
+    grid-area: search;
+    padding: 10px;
+    text-align: center;
+    /* background: orchid; */
+}
+
+#search :nth-child(n){
+    margin: 10px;
+}
+
+#login {
+    grid-area: login;
+    text-align: right;
+    padding: 10px;
+    font-weight: bold;
+    /* background: peru; */
+}
+
+#content-list {
+    grid-area: cont-list;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    padding: 10px;
+    justify-content: space-evenly;
+    /* background: rebeccapurple; */
+}
+
+#content-list div a{
+    font-size: 30px;
+    text-decoration: none;
+}
+
+#content-list div a:hover{
+    color: black;
+}
+
+.faq {
+    margin-top: 250px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq ol li{
+    margin: 30px;
+    color: black;
+    font-size: 25px;
+}
+
+#separator{
+    height: 5px;
+    background: white;
+    margin-top: 80px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border: 2px solid black;
+}
+
+#separator{
+    height: 5px;
+    background: white;
+    margin-top: 80px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border: 2px solid black;
+}
+
+#footer-cont {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    justify-content: space-around;
+}
+
+#footer-cont :nth-child(n) {
+    color: white;
+    font-size: 25px;
+}
+
+@media (max-width: 992px){
+    .header {
+        grid-template-columns: auto auto auto;
+    }
+
+    #content-list div a{
+        font-size: 15px;
+    }
+}
